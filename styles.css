@@ -1,0 +1,35 @@
+body {
+    background: #222222;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#welcome-text {
+    color: #ffffff;
+    font-size: 60px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 43%;
+    opacity: 0;
+}
+
+#welcome-text-subscript {
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    opacity: 0;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #222222;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
