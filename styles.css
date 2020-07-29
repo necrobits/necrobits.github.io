@@ -16,10 +16,7 @@ body {
 #welcome-text-subscript {
     color: #ffffff;
     font-size: 20px;
-    position: absolute;
     text-align: center;
-    width: 100%;
-    top: 50%;
     opacity: 0;
 }
 
