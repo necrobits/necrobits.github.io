@@ -12,9 +12,12 @@
 <div id="particles-js"></div>
 <div id="welcome-text">
     Neural G.I.
-<div id="welcome-text-subscript">
-    The G.I. Joe in Tech
+    <div id="welcome-text-subscript">
+        The G.I. Joe in Tech
+    </div>
 </div>
+<div id="team-members">
+    <div class="title">Team members</div>
 </div>
 
 
@@ -23,15 +26,6 @@
 </noscript>
 
 <script src="particles.min.js"></script>
-<script>
-	particlesJS.load('particles-js', 'particles-config.json', function() {
-  		console.log('callback - particles.js config loaded');
-	});
-	$('#welcome-text').animate({opacity: 1, top: '39%'}, 700, function(){
-        $('#welcome-text-subscript').animate({opacity: 0.5}, {
-            duration: 500
-        });
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>

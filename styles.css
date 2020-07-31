@@ -26,8 +26,29 @@ body {
     height: 100%;
     position: fixed;
     background-color: #222222;
-    background-image: url('');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+}
+
+#team-members {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+#team-members .title{
+    color: #666666;
+    margin-bottom: 10px;
+}
+.member-avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 5px;
 }
