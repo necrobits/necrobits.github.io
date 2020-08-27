@@ -48,7 +48,24 @@ body {
     line-height: 1;
     vertical-align: middle;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    padding: 5px;
+    width: 75px;
+    height: 75px;
+    padding: 7px;
+}
+
+main {
+    text-align: center;
+}
+main .anim-container {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 100px;
+    max-width: 80%;
+    display: block;
+}
+main .anim-container img {
+    max-width: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
 }

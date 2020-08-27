@@ -1,6 +1,6 @@
-
 const org = 'neural-gi';
-function displayMembers(){
+
+function displayMembers() {
     fetch(`https://api.github.com/orgs/${org}/members`)
         .then(r => r.json())
         .then(members => {
@@ -9,13 +9,34 @@ function displayMembers(){
 <a href="${m.html_url}"><img class="member-avatar" src="${m.avatar_url}"/></a> 
 `)
             });
-            $('#team-members').animate({opacity: 1, bottom:10}, 700);
+            $('#team-members').animate({opacity: 1, bottom: 20}, 500);
         });
 }
 
-particlesJS.load('particles-js', 'particles-config.json', function() {
+function startAnimation(onComplete) {
+    const bgFull = $('#anim_bg_full');
+    const bgSlashed = $('#anim_bg_slashed');
+    const ninja = $('#anim_ninja');
+    const text = $('#anim_text');
+    bgFull.css('top', '+=50px');
+    ninja.css('left', '+=50px');
+    bgFull.animate({opacity: 1, top: '-=50px'}, 1000, function () {
+        ninja.animate({opacity: 1, left: '-=50px'}, 500, function () {
+            bgSlashed.animate({opacity: 1}, 10, function () {
+                bgFull.animate({opacity: 0}, 200, function () {
+                    text.animate({opacity: 1}, 1000, function () {
+                        if (onComplete) {
+                            onComplete();
+                        }
+                    });
+                });
+            })
+        });
+    });
+}
+
+particlesJS.load('particles-js', 'particles-config.json', function () {
     console.log('callback - particles.js config loaded');
+    startAnimation(displayMembers);
 });
-$('#welcome-text').animate({opacity: 1, top: '39%'}, 700, function(){
-    $('#welcome-text-subscript').animate({opacity: 0.5}, 500, displayMembers);
-});
+
