@@ -18,12 +18,12 @@ function startAnimation(onComplete) {
     const bgSlashed = $('#anim_bg_slashed');
     const ninja = $('#anim_ninja');
     const text = $('#anim_text');
-    bgFull.css('top', '+=50px');
+    bgFull.css('top', '+=100px');
     ninja.css('left', '+=50px');
-    bgFull.animate({opacity: 1, top: '-=50px'}, 1000, function () {
+    bgFull.animate({opacity: 1, top: '-=100px'}, 1000, function () {
         ninja.animate({opacity: 1, left: '-=50px'}, 500, function () {
             bgSlashed.animate({opacity: 1}, 10, function () {
-                bgFull.animate({opacity: 0}, 200, function () {
+                bgFull.animate({opacity: 0}, 300, function () {
                     text.animate({opacity: 1}, 1000, function () {
                         if (onComplete) {
                             onComplete();
