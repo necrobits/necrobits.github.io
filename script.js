@@ -1,4 +1,4 @@
-const org = 'neural-gi';
+const org = 'necrobits';
 
 function displayMembers() {
     fetch(`https://api.github.com/orgs/${org}/members`)
